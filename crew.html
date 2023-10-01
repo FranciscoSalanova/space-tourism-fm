@@ -19,7 +19,7 @@
     <script src="index.js" defer></script>
     <title>Frontend Mentor - Space Tourism</title>
   </head>
-  <body class="home">
+  <body class="crew">
     <a href="#main" class="skip-to-content">Skip to content</a>
     <header class="primary-header flex">
       <div>
@@ -45,7 +45,7 @@
           <li class="active">
             <a
               class="ff-sans-cond uppercase fs-300 letter-spacing-2 text-white"
-              href="#"
+              href="./index.html"
               ><span aria-hidden="true">01</span>home</a
             >
           </li>
@@ -59,7 +59,7 @@
           <li>
             <a
               class="ff-sans-cond uppercase fs-300 letter-spacing-2 text-white"
-              href="#"
+              href="./crew.html"
               ><span aria-hidden="true">03</span>crew</a
             >
           </li>
@@ -73,27 +73,34 @@
         </ul>
       </nav>
     </header>
-    <main id="main" class="grid-container grid-container--home">
-      <div>
-        <h1 class="fs-500 text-accent ff-sans-cond uppercase letter-spacing-1">
-          so, you want to travel to
-          <span class="fs-900 text-white ff-serif d-block">space</span>
-        </h1>
+    <main id="main" class="grid-container grid-container--crew flow">
+      <h1 class="numbered-title">
+        <span aria-hidden="true">01</span>meet your crew
+      </h1>
+      <div class="dot-indicators flex">
+        <button aria-selected="true">
+          <span class="sr-only">The commander</span>
+        </button>
+        <button aria-selected="false">
+          <span class="sr-only">The mission specialist</span>
+        </button>
+        <button aria-selected="false">
+          <span class="sr-only">The pilot</span>
+        </button>
+        <button aria-selected="false">
+          <span class="sr-only">The crew engineer</span>
+        </button>
+      </div>
+      <article class="crew-details">
+        <h2 class="fs-600 ff-serif uppercase text-accent">commander</h2>
+        <p class="fs-700 ff-serif uppercase">Douglas Hurley</p>
         <p>
-          Let’s face it; if you want to go to space, you might as well genuinely
-          go to outer space and not hover kind of on the edge of it. Well sit
-          back, and relax because we’ll give you a truly out of this world
-          experience!
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
         </p>
-      </div>
-      <div>
-        <div>
-          <a
-            class="large-button bg-white text-dark ff-serif uppercase letter-spacing-3"
-            >explore</a
-          >
-        </div>
-      </div>
+      </article>
+      <img src="./assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" />
     </main>
   </body>
 </html>
