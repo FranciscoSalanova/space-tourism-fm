@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
+    <script src="tabs.js" defer></script>
     <title>Frontend Mentor - Space Tourism</title>
   </head>
   <body class="destination">
@@ -77,34 +78,75 @@
       <h1 class="numbered-title">
         <span aria-hidden="true">01</span>pick your destination
       </h1>
-      <img src="./assets/destination/image-moon.png" alt="moon" />
-      <div class="tab-list underline-indicators flex">
+      <!-- imagen del planeta destino seleccionado -->
+      <picture>
+        <source
+          srcset="./assets/destination/image-moon.webp"
+          type="image/webp" />
+        <img src="./assets/destination/image-moon.png" alt="moon"
+      /></picture>
+      <picture hidden>
+        <source
+          srcset="./assets/destination/image-mars.webp"
+          type="image/webp" />
+        <img src="./assets/destination/image-mars.png" alt="mars"
+      /></picture>
+      <picture hidden>
+        <source
+          srcset="./assets/destination/image-europa.webp"
+          type="image/webp" />
+        <img src="./assets/destination/image-europa.png" alt="europa"
+      /></picture>
+      <picture hidden>
+        <source
+          srcset="./assets/destination/image-titan.webp"
+          type="image/webp" />
+        <img src="./assets/destination/image-titan.png" alt="titan"
+      /></picture>
+      <div
+        class="tab-list underline-indicators flex"
+        role="tablist"
+        aria-label="destination-list"
+      >
         <button
+          role="tab"
+          aria-controls="moon-tab"
           aria-selected="true"
+          tabindex="0"
           class="text-accent uppercase ff-sans-cond fs-300 letter-spacing-2"
         >
           moon
         </button>
         <button
+          role="tab"
+          aria-controls="moon-tab"
           aria-selected="false"
+          tabindex="-1"
           class="text-accent uppercase ff-sans-cond fs-300 letter-spacing-2"
         >
           mars
         </button>
         <button
+          role="tab"
+          aria-controls="moon-tab"
           aria-selected="false"
+          tabindex="-1"
           class="text-accent uppercase ff-sans-cond fs-300 letter-spacing-2"
         >
           europa
         </button>
         <button
+          role="tab"
+          aria-controls="moon-tab"
           aria-selected="false"
+          tabindex="-1"
           class="text-accent uppercase ff-sans-cond fs-300 letter-spacing-2"
         >
           titan
         </button>
       </div>
-      <article class="destination-info flow">
+      <!-- the moon -->
+      <article class="destination-info flow" id="moon-tab" tabindex="0">
         <h2 class="fs-800 ff-serif uppercase">moon</h2>
         <p>
           See our planet as you’ve never seen it before. A perfect relaxing trip
@@ -128,6 +170,93 @@
               est. travel time
             </h3>
             <p class="ff-serif uppercase fs-500">3 days</p>
+          </div>
+        </div>
+      </article>
+      <!-- mars -->
+      <article hidden class="destination-info flow" id="mars-tab" tabindex="1">
+        <h2 class="fs-800 ff-serif uppercase">mars</h2>
+        <p>
+          Don’t forget to pack your hiking boots. You’ll need them to tackle
+          Olympus Mons, the tallest planetary mountain in our solar system. It’s
+          two and a half times the size of Everest!
+        </p>
+        <div class="destination-meta flex">
+          <div>
+            <h3
+              class="fs-200 ff-sans-cond uppercase text-accent letter-spacing-3"
+            >
+              avg. distance
+            </h3>
+            <p class="ff-serif uppercase fs-500">225 mil. km</p>
+          </div>
+          <div>
+            <h3
+              class="fs-200 ff-sans-cond uppercase text-accent letter-spacing-3"
+            >
+              est. travel time
+            </h3>
+            <p class="ff-serif uppercase fs-500">9 months</p>
+          </div>
+        </div>
+      </article>
+      <!-- europa -->
+      <article
+        hidden
+        class="destination-info flow"
+        id="europa-tab"
+        tabindex="2"
+      >
+        <h2 class="fs-800 ff-serif uppercase">europa</h2>
+        <p>
+          The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+          winter lover’s dream. With an icy surface, it’s perfect for a bit of
+          ice skating, curling, hockey, or simple relaxation in your snug
+          wintery cabin.
+        </p>
+        <div class="destination-meta flex">
+          <div>
+            <h3
+              class="fs-200 ff-sans-cond uppercase text-accent letter-spacing-3"
+            >
+              avg. distance
+            </h3>
+            <p class="ff-serif uppercase fs-500">628 mil. km</p>
+          </div>
+          <div>
+            <h3
+              class="fs-200 ff-sans-cond uppercase text-accent letter-spacing-3"
+            >
+              est. travel time
+            </h3>
+            <p class="ff-serif uppercase fs-500">3 years</p>
+          </div>
+        </div>
+      </article>
+      <!-- titan -->
+      <article hidden class="destination-info flow" id="titan-tab" tabindex="3">
+        <h2 class="fs-800 ff-serif uppercase">titan</h2>
+        <p>
+          The only moon known to have a dense atmosphere other than Earth, Titan
+          is a home away from home (just a few hundred degrees colder!). As a
+          bonus, you get striking views of the Rings of Saturn.
+        </p>
+        <div class="destination-meta flex">
+          <div>
+            <h3
+              class="fs-200 ff-sans-cond uppercase text-accent letter-spacing-3"
+            >
+              avg. distance
+            </h3>
+            <p class="ff-serif uppercase fs-500">1.6 bil. km</p>
+          </div>
+          <div>
+            <h3
+              class="fs-200 ff-sans-cond uppercase text-accent letter-spacing-3"
+            >
+              est. travel time
+            </h3>
+            <p class="ff-serif uppercase fs-500">7 years</p>
           </div>
         </div>
       </article>

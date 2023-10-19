@@ -85,7 +85,6 @@ body {
 img,
 picture {
   max-width: 100%;
-  display: block;
 }
 
 /* make form elements easier to work with */
@@ -573,7 +572,7 @@ body {
     'content';
 }
 
-.grid-container--destination > img {
+.grid-container--destination > picture {
   grid-area: image;
   max-width: 60%;
 }
@@ -643,7 +642,7 @@ body {
       '. image content .';
   }
 
-  .grid-container--destination > img {
+  .grid-container--destination > picture {
     max-width: 90%;
   }
 
@@ -664,7 +663,7 @@ body {
     'content';
 }
 
-.grid-container--crew > img {
+.grid-container--crew > picture {
   grid-area: image;
   max-width: 60%;
   border-bottom: 1px solid hsl(var(--clr-white) / 0.15);
@@ -697,7 +696,7 @@ body {
       '. tabs image .';
   }
 
-  .grid-container--crew > img {
+  .grid-container--crew > picture {
     max-width: 90%;
   }
 
@@ -705,7 +704,11 @@ body {
     justify-self: start;
   }
 
-  .grid-container--crew > img {
+  .grid-container--crew > picture {
     align-self: end;
   }
+}
+
+[role='tab']:focus {
+  color: hsl(var(--clr-white));
 }
